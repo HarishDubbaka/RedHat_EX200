@@ -1,14 +1,18 @@
+# 📘 Linux (RHEL) Quick Commands Guide
+
+This README provides commonly used Linux commands for checking system information, user details, and performing basic administrative tasks.
+
 ***
 
-## ✅ 1. How to check which shell you are using
+## ✅ 1. Check Which Shell You Are Using
+
+### Default shell:
 
 ```bash
 echo $SHELL
 ```
 
-Shows your default shell (e.g., `/bin/bash`, `/bin/sh`)
-
-To check current running shell:
+### Current running shell:
 
 ```bash
 ps -p $$
@@ -16,19 +20,17 @@ ps -p $$
 
 ***
 
-## ✅ 2. How to check RHEL version
+## ✅ 2. Check RHEL Version
 
 ```bash
 cat /etc/redhat-release
 ```
 
-or
+Alternative methods:
 
 ```bash
 cat /etc/os-release
 ```
-
-or
 
 ```bash
 hostnamectl
@@ -36,27 +38,25 @@ hostnamectl
 
 ***
 
-## ✅ 3. How many users are in the system
+## ✅ 3. Check Users in the System
 
-To list all users:
+### List all users:
 
 ```bash
 cat /etc/passwd
 ```
 
-To count users:
+### Count total users:
 
 ```bash
 wc -l /etc/passwd
 ```
 
-To see logged-in users:
+### Check currently logged-in users:
 
 ```bash
 who
 ```
-
-or
 
 ```bash
 w
@@ -64,29 +64,61 @@ w
 
 ***
 
-## ✅ 4. How to change date and timezone
+## ✅ 4. Change Date, Time, and Timezone
 
-### Change date manually:
+### Change system date:
+
+```bash
+date -s "2026-06-16"
+```
+
+### ✅ Change system time:
+
+```bash
+date -s "20:30:00"
+```
+
+### ✅ Change both date & time together:
 
 ```bash
 date -s "2026-06-16 20:30:00"
 ```
 
-### Change timezone:
+***
 
-List available timezones:
+### ✅ Recommended (RHEL 7/8/9 using timedatectl)
+
+### Set time:
+
+```bash
+timedatectl set-time 20:30:00
+```
+
+### Set date:
+
+```bash
+timedatectl set-time 2026-06-16
+```
+
+### List available timezones:
 
 ```bash
 timedatectl list-timezones
 ```
 
-Set timezone:
+### Set timezone:
 
 ```bash
 timedatectl set-timezone Asia/Kolkata
 ```
 
-Check current settings:
+### Enable automatic time sync (NTP):
+
+```bash
+timedatectl set-ntp true
+```
+
+### Verify date, time, timezone:
 
 ```bash
 timedatectl
@@ -94,60 +126,66 @@ timedatectl
 
 ***
 
-## ✅ 5. How to check last OS upgrade & system provision info
+## ✅ 5. Check Last OS Upgrade & System Provision Info
 
-### Check last system reboot:
+### Last system boot:
 
 ```bash
 who -b
 ```
 
-### Check package update/upgrade history (RHEL 7/8/9):
+### Package update / upgrade history (RHEL 7/8/9):
 
 ```bash
 yum history
 ```
 
-or
-
 ```bash
 dnf history
 ```
 
-### Check installed packages install date:
+### Recently installed packages:
 
 ```bash
 rpm -qa --last | head
 ```
 
-### Check system install/provision time:
+### Check system installation / provision time:
 
 ```bash
-ls -l / | grep root
+ls -l /
 ```
 
-or better:
+Better method:
 
 ```bash
 tune2fs -l /dev/sda1 | grep 'Filesystem created'
 ```
 
-(Note: replace `/dev/sda1` with your root partition)
+> ⚠️ Replace `/dev/sda1` with your actual root partition.
 
 ***
 
-## ✅ Quick summary table (for fast revision)
+## 📌 Quick Summary
 
-| Task            | Command                    |
-| --------------- | -------------------------- |
-| Shell           | `echo $SHELL`              |
-| RHEL Version    | `cat /etc/redhat-release`  |
-| User count      | `wc -l /etc/passwd`        |
-| Logged users    | `who`                      |
-| Set date        | `date -s`                  |
-| Set timezone    | `timedatectl set-timezone` |
-| Upgrade history | `yum history`              |
-| Install time    | `tune2fs -l`               |
+* **Shell** → `echo $SHELL`
+* **RHEL Version** → `cat /etc/redhat-release`
+* **User Count** → `wc -l /etc/passwd`
+* **Logged Users** → `who`
+* **Set Date/Time** → `date -s` or `timedatectl set-time`
+* **Set Timezone** → `timedatectl set-timezone`
+* **Enable NTP** → `timedatectl set-ntp true`
+* **Upgrade History** → `yum history`
+* **Install Time** → `tune2fs -l`
+
+***
+
+## 🚀 Notes
+
+* Some commands require **root/sudo privileges**
+* Use `timedatectl` instead of `date -s` in production systems
+* Enabling **NTP** is recommended to keep system time accurate
+* Always verify disk/partition before running `tune2fs`
 
 ***
 
