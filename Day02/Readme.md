@@ -300,4 +300,4 @@ user@host:~$
 💡 *Mastering CLI is the foundation for becoming a strong Linux/System Administrator.*
 
 ```
-```
+
