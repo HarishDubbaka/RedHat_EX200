@@ -17,4 +17,4 @@
 - Linux Distributions Overview  
 - Conclusion  
 
-## 📘 Day 02 - soon
+## 📘 Day 02 - Getting Started with Linux Fundamentals
