@@ -1,1 +1,155 @@
+Here are clear Linux (RHEL) commands for each of your questions:
+
+***
+
+## ✅ 1. How to check which shell you are using
+
+```bash
+echo $SHELL
+```
+
+Shows your default shell (e.g., `/bin/bash`, `/bin/sh`)
+
+To check current running shell:
+
+```bash
+ps -p $$
+```
+
+***
+
+## ✅ 2. How to check RHEL version
+
+```bash
+cat /etc/redhat-release
+```
+
+or
+
+```bash
+cat /etc/os-release
+```
+
+or
+
+```bash
+hostnamectl
+```
+
+***
+
+## ✅ 3. How many users are in the system
+
+To list all users:
+
+```bash
+cat /etc/passwd
+```
+
+To count users:
+
+```bash
+wc -l /etc/passwd
+```
+
+To see logged-in users:
+
+```bash
+who
+```
+
+or
+
+```bash
+w
+```
+
+***
+
+## ✅ 4. How to change date and timezone
+
+### Change date manually:
+
+```bash
+date -s "2026-06-16 20:30:00"
+```
+
+### Change timezone:
+
+List available timezones:
+
+```bash
+timedatectl list-timezones
+```
+
+Set timezone:
+
+```bash
+timedatectl set-timezone Asia/Kolkata
+```
+
+Check current settings:
+
+```bash
+timedatectl
+```
+
+***
+
+## ✅ 5. How to check last OS upgrade & system provision info
+
+### Check last system reboot:
+
+```bash
+who -b
+```
+
+### Check package update/upgrade history (RHEL 7/8/9):
+
+```bash
+yum history
+```
+
+or
+
+```bash
+dnf history
+```
+
+### Check installed packages install date:
+
+```bash
+rpm -qa --last | head
+```
+
+### Check system install/provision time:
+
+```bash
+ls -l / | grep root
+```
+
+or better:
+
+```bash
+tune2fs -l /dev/sda1 | grep 'Filesystem created'
+```
+
+(Note: replace `/dev/sda1` with your root partition)
+
+***
+
+## ✅ Quick summary table (for fast revision)
+
+| Task            | Command                    |
+| --------------- | -------------------------- |
+| Shell           | `echo $SHELL`              |
+| RHEL Version    | `cat /etc/redhat-release`  |
+| User count      | `wc -l /etc/passwd`        |
+| Logged users    | `who`                      |
+| Set date        | `date -s`                  |
+| Set timezone    | `timedatectl set-timezone` |
+| Upgrade history | `yum history`              |
+| Install time    | `tune2fs -l`               |
+
+***
 
