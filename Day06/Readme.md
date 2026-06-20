@@ -325,8 +325,87 @@ Examples:
 
 ---
 
+### 🔍 Linux Reboot Investigation – Quick Checklist
+
+If a Linux server is unexpectedly rebooted, check the following:
+
+#### 1️⃣ When did the reboot happen?
+
+```bash
+last reboot
+```
+
+or
+
+```bash
+who -b
+```
+
+#### 2️⃣ Who was logged in before the reboot?
+
+```bash
+last
+```
+
+#### 3️⃣ Check logs from the previous boot
+
+```bash
+journalctl -b -1
+```
+
+List all boots:
+
+```bash
+journalctl --list-boots
+```
+
+#### 4️⃣ Check if someone executed a reboot command
+
+```bash
+grep sudo /var/log/secure
+```
+
+or
+
+```bash
+grep "systemctl reboot" /var/log/secure
+```
+
+#### 5️⃣ Verify using Audit Logs (if auditd is enabled)
+
+```bash
+ausearch -x systemctl
+```
+
+#### 6️⃣ Check for crashes or kernel panic
+
+```bash
+journalctl -k -b -1
+```
+
+---
+
+### 🎯 Key Questions to Answer
+
+* When did the reboot occur?
+* Which user initiated it?
+* Was it a planned reboot?
+* Was `sudo` used?
+* Was it caused by a kernel panic, hardware issue, or system crash?
+
+### 💡 Most Useful Commands for RHEL 8/9
+
+```bash
+last reboot
+who -b
+journalctl -b -1
+grep sudo /var/log/secure
+ausearch -x systemctl
+```
+
+These commands usually provide enough information to identify the cause and source of a reboot. 🚀
+
+
 ## 📚 Summary
 
 The Linux File-System Hierarchy Standard (FHS) organizes files and directories into a predictable structure. Understanding the purpose of each major directory is a fundamental skill for Linux System Administrators, DevOps Engineers, Cloud Engineers, and SAP BASIS Administrators.
-
-You can save this directly as **`README.md`** in your Linux learning repository.
