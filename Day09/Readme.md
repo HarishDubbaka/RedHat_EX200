@@ -383,10 +383,4 @@ rm symlink
 rm hardlink
 ```
 
-## 🎯 Interview Question
 
-**Q: What is the main difference between a hard link and a symbolic link?**
-
-**Answer:**
-
-A **hard link** points directly to the same inode (data) as the original file and continues to work even if the original filename is deleted. A **symbolic link** points to the filename/path of another file and becomes a dangling link if the target file is removed.
