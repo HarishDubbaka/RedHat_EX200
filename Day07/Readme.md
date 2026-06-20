@@ -539,4 +539,3 @@ Documents/report.txt
 
 Mastering Linux paths is one of the most important skills for Linux System Administrators, DevOps Engineers, Cloud Engineers, and SAP BASIS Administrators.
 
-You can save this directly as **`README.md`** in your Linux learning GitHub repository.
