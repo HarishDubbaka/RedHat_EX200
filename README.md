@@ -35,5 +35,25 @@
 * Logging Out (`exit`, `Ctrl + D`)
 * Summary
 
+ Day 03 Linux CLI & Bash Shell Fundamentals
+ ## 📑 Contents
+
+* 📖 Overview
+* 🖥️ Command Syntax
+* 📅 Date & Time Commands
+* 🔐 Password Management
+* 📂 File Information
+* 📄 Viewing Files (`cat`, `less`, `head`, `tail`)
+* 📊 Word Count (`wc`)
+* ⚡ Tab Completion
+* 📝 Multi-line Commands
+* 📜 Command History
+* ⌨️ Bash Shortcuts
+* 💡 Productivity Tips
+* 🎯 Summary
+* 📚 Next Topics
+
+🐧 *The Linux terminal: where a few keystrokes can save thousands of clicks!* 🚀
+
 
 **Goal:** From Linux Beginner ➜ RHCSA Certified System Administrator (EX200) 🎯🐧🚀
