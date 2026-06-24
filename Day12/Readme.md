@@ -1,4 +1,4 @@
-#  Managing Local Users and Groups – RHCSA EX200 Notes
+#  Managing Local Users and Groups 
 
 ## 🎯 Objective
 
