@@ -1,4 +1,4 @@
-# Configuring Repositories by Using RPM Packages (Easy Explanation)
+# Configuring Repositories by Using RPM Packages 
 
 When you want to install software from a new repository, you have **two options**:
 
