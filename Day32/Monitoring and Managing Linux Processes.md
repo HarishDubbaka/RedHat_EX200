@@ -258,15 +258,10 @@ The zombie entry is removed from the process table.
 
 ### Linux Process States
 
-![Image](https://images.openai.com/static-rsc-4/4RTCDyyyByDcMBCgRNyqxbL8o5lkG80ypMWPw7mIyZ02fP4KOmbgJaOw-Yf_yBWVq2IiAOwRlEUjQXUns0rqlvMDwkXlpl-Q-nZKRwnYlj8sdsauwSzWdgaXnP4DjjZ9FiwTloiUclZDCm1S7X55JN5gh4Q0J2dNy-lJLYR23JstwWv_ebVEjUYtY9j1XH4a?purpose=fullsize)
-
 ![Image](https://images.openai.com/static-rsc-4/_MsmOsC_rnTNFCJzX7-dcYFA-fdTQs1D4RK8Egomff7RW9AMpC6q-ZDPXjfWKOfLdfJQeXnktleUSjGtNpypMWVblYtlgE7Tx9xSGc-4ACIGjuHcEKLJlwkVat3v0q4K5XiaBhOGGyYvlUPfTpUisJVHZKpq1bntPxL3dvelE65Jz6nS5GDmafXu75aby3dw?purpose=fullsize)
 
 ![Image](https://images.openai.com/static-rsc-4/l7e9626KAqq5rFnhsSjuv4cGTJ9cbRueEZsom6MjBWp8IxYAxdzD0QA3E7zzLS9z8Qhl_mNZxAR5_xQ_ps1cNA05MkAaD-0RhCmKYQAb3SMpOXECKg28G15TJqPWo8l7W4ehSggeNGwIATDt2idUijQvUrYGsF1qtKzlrp0AGcFLF4xtIa2euxotcYa59Ock?purpose=fullsize)
 
-![Image](https://images.openai.com/static-rsc-4/7hk_pAn9HrL11tCISK4T-ejNh5YHt3Cn7uhXeRydFTmD0ovKKZO5xWsZxhwyRhNOJRpX2jZMgMWul9AZ8ZXLlX8B9L2Ez9pk1MFDSNI8Zp1dpE_bk8hYCp_ziurnDBxfLuGAy1GggC6XftUFtpRQRmxvMboOY-vQSsHr1athLBh4jU_UsiK94Av-lAGmOWGO?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/J5Z7HK8uXpdjBZiXRHvNrKAbTba0DFOeQYO3jINExkN5GnBzSTUd67AIcsMYzP-OQaG1xwF0ae_2APY9l3QjwtADz1zfYcQS8jMAYM-avsRoU3k_Emzp1DWlpTzkMTcR7dDkslDlyEFdps5A-kE5eE9rdow2Jrxld4ob_a9vJ7FgKg0wRe7wT0kOErZDSznA?purpose=fullsize)
 
 | State                 | Flag  | Description                          |
 | --------------------- | ----- | ------------------------------------ |
