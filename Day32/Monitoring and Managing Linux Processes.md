@@ -2,13 +2,6 @@
 
 ### Process Lifecycle Overview
 
-![Image](https://images.openai.com/static-rsc-4/e90JVbh-YltnhsYoPQNYcBqLwVCbzv6qRBQlwysAPsdWPYf8joSQsXTwMpxcG3r8M5yvxUCVaNxbMzvQQxUjW6lO2V7bMLzdkUc3_Ax0LaZtebYg4quvQ3l7mYu_KrMAeK-pJc0sd7QiQWQE4ugbuwyIgJKHYwfjEThHb5CA-i1q4F3gSP15QOEYWZG75TF7?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/vJJsEREd_C5Q31DXErfv62fazjG4RKsg3EbjzNqHqrpK8PSSn2epWeNKFsfbeHOo-d3fMwqIM5lJz4FCkJs3iyB-jP_mTtDyHU3B_AmDwLW0anroyQvsmD5iad4HZES3Ws48zqy7tATqGzQa4d_4PRmuI8_Iw_tFHEfG4TPMR_y1P5Vetm6SQAH3pdNEwvHd?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/baRbiKOhZBFdY55EZlmEnhfGhAmtxa38MO7jLKGrJW_J-WnjvdqSZMOAPx5CfRIq79FFSAb0h6b91qRVE2GyesFR_mWA4E2L_cNQ7Hgte6WNb8oGC6n-ytI5-0pZz4MFTKiJmx7EF1cX3GwybZe8BgDrgoBXR_NQfpJPXyXyiZjFjHO4JOunDsRfkaKQsVIJ?purpose=fullsize)
-
-
 ## Objective
 
 Identify the processes currently running on a Linux system, understand their lifecycle, determine their process states, and monitor their resource usage.
@@ -250,6 +243,14 @@ wait()
 ```
 
 The zombie entry is removed from the process table.
+
+---
+
+![Image](https://images.openai.com/static-rsc-4/e90JVbh-YltnhsYoPQNYcBqLwVCbzv6qRBQlwysAPsdWPYf8joSQsXTwMpxcG3r8M5yvxUCVaNxbMzvQQxUjW6lO2V7bMLzdkUc3_Ax0LaZtebYg4quvQ3l7mYu_KrMAeK-pJc0sd7QiQWQE4ugbuwyIgJKHYwfjEThHb5CA-i1q4F3gSP15QOEYWZG75TF7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vJJsEREd_C5Q31DXErfv62fazjG4RKsg3EbjzNqHqrpK8PSSn2epWeNKFsfbeHOo-d3fMwqIM5lJz4FCkJs3iyB-jP_mTtDyHU3B_AmDwLW0anroyQvsmD5iad4HZES3Ws48zqy7tATqGzQa4d_4PRmuI8_Iw_tFHEfG4TPMR_y1P5Vetm6SQAH3pdNEwvHd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/baRbiKOhZBFdY55EZlmEnhfGhAmtxa38MO7jLKGrJW_J-WnjvdqSZMOAPx5CfRIq79FFSAb0h6b91qRVE2GyesFR_mWA4E2L_cNQ7Hgte6WNb8oGC6n-ytI5-0pZz4MFTKiJmx7EF1cX3GwybZe8BgDrgoBXR_NQfpJPXyXyiZjFjHO4JOunDsRfkaKQsVIJ?purpose=fullsize)
 
 ---
 
