@@ -223,11 +223,6 @@
 
 
 
-```markdown
-# 📚 RHCSA Learning Journey
-
----
-
 # 📘 Day 37 – Identifying System Processes that Start Automatically
 
 ## 📑 Contents
