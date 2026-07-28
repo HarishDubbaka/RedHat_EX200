@@ -221,3 +221,71 @@
 
 ## 🚀  Happy Learning 
 
+
+
+```markdown
+# 📚 RHCSA Learning Journey
+
+---
+
+# 📘 Day 37 – Identifying System Processes that Start Automatically
+
+## 📑 Contents
+
+- Daemons & `systemd`
+- `systemd` Features
+- Systemd Units
+- Service Management
+- Listing Services
+- Service Status
+- Service States
+- Service Checks
+- Failed Services
+- Command Summary
+- Interview Questions
+- Summary
+
+> 🐧 *`systemd` is the manager behind the scenes—starting services, handling dependencies, and keeping Linux running smoothly!* ⚙️🚀
+
+---
+
+# 📘 Day 38 – Controlling System Services with `systemctl`
+
+## 📑 Contents
+
+- Introduction
+- What is `systemctl`?
+- Check Service Status (`status`)
+- Start a Service (`start`)
+- Stop a Service (`stop`)
+- Restart a Service (`restart`)
+- Reload a Service (`reload`)
+- Restart vs Reload
+- Reload or Restart (`reload-or-restart`)
+- Real-Life Example
+- Common `systemctl` Commands
+- Visual Workflow
+- Interview Questions
+- Summary
+
+> 🐧 *With `systemctl`, you're the remote control for Linux services—start, stop, restart, and reload with confidence!* 🎮⚡
+
+---
+
+# 📘 Day 39 – Listing Unit Dependencies & Masking Services in Linux (`systemd`)
+
+## 📑 Contents
+
+- Unit Dependencies
+- Reverse Dependencies
+- Service Dependencies
+- Masking Services
+- Unmasking Services
+- Disabled vs Masked
+- SAP BASIS Examples
+- Command Summary
+- RHCSA Exam Tips
+- Summary
+
+> 🐧 *Dependencies keep services connected, while masking ensures unwanted services stay completely out of the picture!* 🔗🚫🚀
+```
