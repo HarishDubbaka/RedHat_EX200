@@ -284,7 +284,8 @@
 
 > 🐧 *Dependencies keep services connected, while masking ensures unwanted services stay completely out of the picture!* 🔗🚫🚀
 
-```
+---
+
 # 📘 Day 40 – Enabling Services to Start or Stop at Boot
 
 ## 📑 Contents
