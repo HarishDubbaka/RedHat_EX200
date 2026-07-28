@@ -283,4 +283,22 @@
 - Summary
 
 > 🐧 *Dependencies keep services connected, while masking ensures unwanted services stay completely out of the picture!* 🔗🚫🚀
+
 ```
+# 📘 Day 40 – Enabling Services to Start or Stop at Boot
+
+## 📑 Contents
+
+- Running vs Boot-Time Services
+- Starting & Stopping Services
+- Enabling & Disabling Services
+- Symbolic Links (Symlinks)
+- `enable --now` & `disable --now`
+- Checking Service Status
+- Understanding `mask` vs `disable`
+- Complete Workflow Example
+- Command Summary
+- Quick Memory Trick
+- Summary
+
+> 🐧 *Start controls the present, Enable prepares the future—master both to manage Linux services like a pro!* ⚙️🚀
