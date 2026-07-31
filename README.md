@@ -303,3 +303,46 @@
 - Summary
 
 > 🐧 *Start controls the present, Enable prepares the future—master both to manage Linux services like a pro!* ⚙️🚀
+
+---
+
+# 📘 Day 41 – Accessing Removable Media
+
+## 📑 Contents
+
+- Understanding Storage Devices
+- Understanding File Systems
+- Block Devices & Device Naming
+- Understanding Partitions
+- LVM Basics
+- Accessing File Systems
+- Checking Disk Usage (`df`)
+- Checking Directory Usage (`du`)
+- Essential RHCSA Commands
+- Quick Memory Map
+- Summary
+
+> 🐧 *Every file begins its journey on a storage device—understanding how Linux organizes disks is the first step to mastering system administration!* 💾🚀
+
+---
+
+# 📘 Day 42 – Mounting and Unmounting File Systems
+
+## 📑 Contents
+
+- What is Mounting?
+- Windows vs Linux Storage
+- Understanding Block Devices
+- Identifying Storage Devices (`lsblk`)
+- Understanding Mount Points
+- Mounting File Systems
+- Mounting with UUID
+- Unmounting File Systems (`umount`)
+- Troubleshooting "Target is Busy"
+- Complete Mounting Workflow
+- RHCSA Exam Tips
+- Summary
+
+> 🐧 *A storage device is just hardware until it's mounted—learn to connect, access, and safely unmount file systems like a Linux Administrator!* 🔗💻
+
+---
