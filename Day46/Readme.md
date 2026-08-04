@@ -110,12 +110,6 @@ You can think of PEs as **small LEGO blocks** that LVM uses to build storage.
 
 ## Volume Group (VG)
 
-![Image](https://images.openai.com/static-rsc-4/QRTyvTOrYc99htEqyU1KPTEt8vF1vKh7keRjc_ksdke-VlKFnFvAMNjpYTPiRQt3cksSQrF30_KAESZGoTyfFI9oUh3MGKQFaeP8OvJ7tpq1zPcfI0EcYsnG3T1bEFUVPwJuYz-MS78mnnmq5on1bVKhY-2E95Be7RlbxI7xXqJI44bJ4xXtt3ke3z870plp?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/pmSNTJjK8Okk6aesepce3jmS3KRTk6dIfj-ofLMaPji8d9ccr5Un2C4J0UVemzRjOKhCul62gRhvYY11yUDBryeWH7YUK2WoMgMGuWa9G871lcofSTvhAAPIZBvKhW-tsV9QUAXgJJIWUBbiuQuNyYN4Dw7kmLNVxGpUN_eDWr7FhSPRAEKRLGrwwdzmNc7s?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/XDiDvZ7HZgPRforsIAH_VOAZBIFCmtkKP84gCnmD_4H8HBbEqmGsQ51_Few1ynM5h60ZZEbsGVpyAOoSNq4eaWBxX2j-hlEbKHKWE-pyfJbrOhrucvvQh8z3c9RZwa4Fr0d8wxH-M0MJiP_c2Dm6uSYbfF1K2410k8GqQANXWcmvywb5tqJSJdL-tW3puCF9?purpose=fullsize)
-
 ![Image](https://images.openai.com/static-rsc-4/bKK5YF6NvogIwOUwj2JdoL8i4QtkyzRQjmU-GqX-opbESjn-ReMKO1p0Xm8YRS0WHSXz4zukLGy2pK34dESuw3JeKu3Ao_4BiBwA6jXm0A6Q4bnJHWUzReD2Tp3-7_-hJbAWNmH8Bk0mokKXbOuhZNVc_fjF_wTB1REreJ8-PT8chjiC5ue5yRU77oD5Qopu?purpose=fullsize)
 
 ![Image](https://images.openai.com/static-rsc-4/H6PihR4fr6Jtx6mxfOGfH-s5YnmDSEbPD3RtbmwsD4iuYxwBRa5MDrLs2SolqB7aFLg61HABFKje8pfwHJSYFQDD42hk56bf_5-kUXAl83_i4JDck4e_AWrUyqMT2ibhyJUqpsNZ0zmYicUiej3SXQZgEfCk2fXGez1u8HnBq67PC45QEGlQIABrvZnkQTz4?purpose=fullsize)
