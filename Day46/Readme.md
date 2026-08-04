@@ -37,13 +37,6 @@ Each layer has a specific purpose.
 
 ![Image](https://images.openai.com/static-rsc-4/IIWGVs1UXTEskNh_7gkdXznFqPCoIMGNqpi3N3GUDoVQuZz1KbKIMW6f8ggUEXwChdNcMGS_kT4Ogl2Q_jFFWZu3lLrk-TY86cACnihRxo-fz8DnhSqsB1iGP7u1FhywtM7COy6_Urh1-mw8TpbSNa7pXKyT8rRcF-JvfLRA0zB_GXe4BVprM1yU0Juyuwlh?purpose=fullsize)
 
-![Image](https://images.openai.com/static-rsc-4/A8lBUHxIAzIhl0HHdVlV5Dt8I7WZyj19nwNE5h4z0knFQyv-0x9DPr-cFlRjhMfw7FYF4PcnbbNuJRpHVU3IXFTGoC7_LDmdTDC0WfJr7zfBI1vOLw3IPpge1EuTr0h8P8cvLKbhjIRewSWkdtb6-XuXOlu-XWTS0xM2LiJJgm30fQw7_y7053TLTLdcZjY0?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/3DywAlc6VV9Xf4Xzw1rQsFl95vz12xutvjZaoxwosisC77M7ctJLtSlOFbB-vqyqyjvB3wKk2YABcq0YCe2chHF37OzSAM54V_Nvh8oMoTFGFHPM6EmeA2u7PicyclcTG5urZCgEhqDuF9oJCFnbTijWVBpwWj2VzplvIWHNqTxIgCnRSd8ozvGin5jfgVJj?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/rwTkpv_X2OEOiFXydC1y-jHEBHE7fh-7qzs_rBrAJafhuWZAiD4c8A9byhUSlXkQX6d1mz_zSmX9ZsfMEriX4l51VIiWkWOV44ZEbss76ELty4GhBv7XHHz_2UNZSKwC57Zj_KDfLyAcpNQMZpq98PN1rTjvAB25NUh8cXPG9nsrL2qyurNd6QVdngkIj-CF?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/ZKI7juBsFo-sB029oa3PWu60fWN2LP1ZYs0qCRh6ORyxq8SdXr6IPPcrzWyqQVtNFNxCdq4zfNTZDj3ZtklyQ7t6flQWkuuzEly4LEz7s2HaG_w3gCwC86vlAo-QQfFNDh3mww4kp3_w-kSHCue4DMKDA3u8dzn_8fiQBdvRSU4YXKzX4wzAwbxyzirIlHaw?purpose=fullsize)
 
 A **Physical Device** is the actual storage hardware available on the system.
 
