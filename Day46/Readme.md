@@ -62,15 +62,8 @@ Think of a physical device as an **empty storage container**.
 
 ## Physical Volume (PV)
 
-![Image](https://images.openai.com/static-rsc-4/8p-4c6IAJeyy4v2gKDa87JHaVIadlxTnmqBfde8EZKSf01qltroHAmf-uw2CQD3Rpk6tchxrwxcdwIrX5i0hJ-Q3ea3nuXyzzUbNV4POzE0rKlTtrfEdgqNPKHHm4gsZmh4aBDr1RZMb1CrxT5u_pSeijFONRuxNh10O9NpOcQrfQszR1f43Vc-Wx-2kP3Vv?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/gmZifJrwGFlbtU4zcMfmDE3AHI4T2JyNDZhsjNp_MZ7CiRPrxmp7VtLBDfNoi7fTSAC7VbSC9zW1zd1yTIonXO20DyJhXiCsB2W68flRUfc64ihUnXpNYLt5di_wfEM6WiPWp7SRHuMKEPDKqvChLc5D-uIX7BcCoTm47bldL1jH7Hh76Qvcu2PHX3g_W649?purpose=fullsize)
-
 ![Image](https://images.openai.com/static-rsc-4/XDiDvZ7HZgPRforsIAH_VOAZBIFCmtkKP84gCnmD_4H8HBbEqmGsQ51_Few1ynM5h60ZZEbsGVpyAOoSNq4eaWBxX2j-hlEbKHKWE-pyfJbrOhrucvvQh8z3c9RZwa4Fr0d8wxH-M0MJiP_c2Dm6uSYbfF1K2410k8GqQANXWcmvywb5tqJSJdL-tW3puCF9?purpose=fullsize)
 
-![Image](https://images.openai.com/static-rsc-4/paQj6Y3q5uIMTzbyTzvPakw-Ryj56o3HSO4lt6y3_R8VPvknb_u5OIDvqCYO1JW_v_qNfjAB2KmZDKYvquXrsjobAr_pevO6BV1lSzAlAiYOjzwh310iCf1rSbNznlhi_JiHjLtPflSqZq_IKJBaiUAoJFsz_Lr7SKRAEuRd3FrGc4F7ZO3S1rmQdzvE0OfC?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/F3uRJ_kWpTg4qqFuAatbPow0XokzxplR1PqkgI3hX9d7aS8KWpxcUHaPGeHc0Cyh6sCb39RQCoMiQza6POJLZZyuH13PHs7Bq2OUuvekWcOEQBTbozXBZBado7j_3gEwqCTzYI_B9_mUUqOe1pLvRJvuYZjkEUeUSTsLGTepNv2Jn9jNbKlIGqU4NJJN1ePB?purpose=fullsize)
 
 A **Physical Volume (PV)** is a physical disk or partition that has been prepared for use by LVM.
 
