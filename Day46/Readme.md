@@ -171,10 +171,6 @@ Think of an LV as a **virtual partition** that can often be resized more easily 
 
 ## Logical Extents (LE)
 
-![Image](https://images.openai.com/static-rsc-4/f9NCQWusPLdpYLlCXF8Ud7VNMJAPyhy_oVnkplC4D2Gj73vSIzA8N7vtC_bACVfkfXJOi1ATmoAwOK6jdka-OSRY8P6kDhOqKqM72tjXfzV0ZZ_kj3iKNZ7477TNMw1wBOyO36L9f_idGrEggeG4Jskils1_fCY-IGSO36e4HM6BYHn4rcrvtgaHv2X2EIDz?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/CeZELK0hQORX4f2VrzzJ2BkMyBgHiq4kZa5oa9s3eGM5TIZu02PV6SIFp_OW9Ihj1FWALLOYqsCAt_YksS9BY_nwG1VDmwoJ7g4qoXVrhgrAvMuzBvvke685ugPexPfQlAun6P2wV2lkhxxmoGmicHU5KQ_xa8gtoYCXKd3sljld_dZfqtRDcdCbHrf9enZ-?purpose=fullsize)
-
 ![Image](https://images.openai.com/static-rsc-4/klG6mHd2t4rUrKpHpJSH6xZgM-zHHnebQmKAJi0RctwyF0k5713MCaupD33D8IRVGCzK6NlycZTkJIjWksuU9FpWmy8z9wC69krJUKJ83se2_72jMHdm7yXOblG9aRCTTArjzha_dK37irpMrlhIh3nu0GkSZyNV4eZZ_448pSTWQ4i9FLaO3lZujP7utT4k?purpose=fullsize)
 
 A **Logical Extent (LE)** is the smallest storage unit inside a Logical Volume.
