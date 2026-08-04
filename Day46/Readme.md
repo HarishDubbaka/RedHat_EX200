@@ -143,12 +143,6 @@ Think of a VG as a **large water tank** made by connecting several smaller tanks
 
 ## Logical Volume (LV)
 
-![Image](https://images.openai.com/static-rsc-4/Erc9DcCOyt41_c6ka43oxsmC7lCWKnKMwHy3QCQRN5QxTH7cPqKtItWY9lRfOuOzIIH-CCmddxgLHOFiQQCTedRX-WaEolrgTP_y_Cj7_nHZOfPyS5hbjEbKc8KvHERMntdJ3XdnhvIPzyWub-LRBnTnDWPTV426-xDSPxW7_aIfuwaujI9-b_ioEQ2rQp_x?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/gmZifJrwGFlbtU4zcMfmDE3AHI4T2JyNDZhsjNp_MZ7CiRPrxmp7VtLBDfNoi7fTSAC7VbSC9zW1zd1yTIonXO20DyJhXiCsB2W68flRUfc64ihUnXpNYLt5di_wfEM6WiPWp7SRHuMKEPDKqvChLc5D-uIX7BcCoTm47bldL1jH7Hh76Qvcu2PHX3g_W649?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/QRTyvTOrYc99htEqyU1KPTEt8vF1vKh7keRjc_ksdke-VlKFnFvAMNjpYTPiRQt3cksSQrF30_KAESZGoTyfFI9oUh3MGKQFaeP8OvJ7tpq1zPcfI0EcYsnG3T1bEFUVPwJuYz-MS78mnnmq5on1bVKhY-2E95Be7RlbxI7xXqJI44bJ4xXtt3ke3z870plp?purpose=fullsize)
-
 ![Image](https://images.openai.com/static-rsc-4/17cR3H8aFXaRK9sO-_w8BfUfICWsWuajriqRmBgwF1YKNyR2wscEbOf43tjao2hxKcz5Yq1Ev5eHTe1-YRpOTRCQ3ahSqTV5Gtj2jQY_w-oicowT7BwPjTrtbjZ5xo_xiTS_k8E6f432UTIAouMHlgoVVNYJuQj9q-cj8ylW2lsn-o95_SE6jjyLqKHa6Dbt?purpose=fullsize)
 
 ![Image](https://images.openai.com/static-rsc-4/gxiQdauwoxtawEhkRE7wKj_r_YiGVzkRSrsxfqfJIOqLVqkG4-WqNRxlq83NK2wk_b8BE3lYbu2SydK2R9ibaTDPS2o93lQ1s55RB6iiF7sYwbUhY0fI-qArnyR4uDGija8VPc_PfytK9bQjvu3CH4dXAyLXNciQ3r6gFTrP_pp92BhBt1hSNF-5oEgPbFaF?purpose=fullsize)
