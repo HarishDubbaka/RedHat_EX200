@@ -81,14 +81,6 @@ Think of a PV as a **registered disk** that LVM is allowed to use.
 
 ## Physical Extents (PE)
 
-![Image](https://images.openai.com/static-rsc-4/gmZifJrwGFlbtU4zcMfmDE3AHI4T2JyNDZhsjNp_MZ7CiRPrxmp7VtLBDfNoi7fTSAC7VbSC9zW1zd1yTIonXO20DyJhXiCsB2W68flRUfc64ihUnXpNYLt5di_wfEM6WiPWp7SRHuMKEPDKqvChLc5D-uIX7BcCoTm47bldL1jH7Hh76Qvcu2PHX3g_W649?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/CeZELK0hQORX4f2VrzzJ2BkMyBgHiq4kZa5oa9s3eGM5TIZu02PV6SIFp_OW9Ihj1FWALLOYqsCAt_YksS9BY_nwG1VDmwoJ7g4qoXVrhgrAvMuzBvvke685ugPexPfQlAun6P2wV2lkhxxmoGmicHU5KQ_xa8gtoYCXKd3sljld_dZfqtRDcdCbHrf9enZ-?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/SSwxQkENFobLpFCeDJaJ-BVGNPVwEHNoSUnnPVRDKTqQsIIhpuwnT3UWZQsO550zt-_vZL78vvxuVHtsMb1S3WaNWugdyQYVYqGyGPLt6gr2ao8-467aeX_xxX3Yd48kJhNcHT80DDL-xs4D0M7WkF50VIVCVMsi5O8VvKLVWnk-NCHNi3j_M4s0jJCawWc0?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/DfT1TNC5RDQs-bNqu2Q_lEEUJgWNQmW4Yru_ohATaWA29vsMEHlXf2mOKIjnT5QHTpzo96ra6CKmv3AV23zsOS0FhDVlULalrkgLl6w2YNkDJMIXPOosdah9fLGNaEFC0mlmzh1e3OcbeGRgFd2nIw8hW8s9a6DvqFePKf1Ja5BgN1Q-aOfNkIDjk931I8SB?purpose=fullsize)
-
 ![Image](https://images.openai.com/static-rsc-4/IbWviY6nxcq7gxY_-bAlOEpteJtyAggxaguD1BWgIOF1ZWGUWBCZEEZyUPCSirttOC1m8Xf9EDu9li2nqF-x1Jcw5rWWkb7HgxO_i_bnhVWE6vF5Iqw-nD3_4VMGYYzRthgv1af6onwM6EU6aJXsBTSkFdtlOJ4HoE-a0jjcVi16Qlbk392QeSuAjSwlF71-?purpose=fullsize)
 
 A **Physical Extent (PE)** is the smallest unit of storage inside a Physical Volume.
