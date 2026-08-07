@@ -1,4 +1,4 @@
-# **Day 43 – Extending LVM (Increase LV, VG Space in Linux)**
+# **Day 49 – Extending LVM (Increase LV, VG Space in Linux)**
 
 ## Yesterday's Recap
 
