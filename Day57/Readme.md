@@ -1,69 +1,64 @@
-Configuring a Persistent System Journal
-Configuring a Persistent System Journal
-Objectives
-Configure the system journal to persistently store log events after a reboot.
-Configure automatic journal rotation to control disk usage.
-Learn how to view journal entries from specific system boots.
-Understand where systemd-journald configuration files are located.
-1. Configure Persistent Journal Storage
+## Configuring a Persistent System Journal
 
-By default, Red Hat Enterprise Linux stores system journal files in:
+### Objectives
 
-/run/log/journal
+- Configure a system journal to persistently store the log events after a reboot and to rotate the log events automatically.
 
+### System Journal Storage
 
-This storage is volatile, so the journal is normally cleared after a reboot.
+By default, Red Hat Enterprise Linux stores the system journal files in the `/run/log/journal` directory, and the system clears the system journal after a reboot. You can configure `systemd-journald` service to keep the journal files persistently, so that you can review journal events across reboots of the system.
 
-To enable persistent journal storage, create the /var/log/journal directory:
+#### Configure a Persistent System Journal
 
-root@host:~# mkdir /var/log/journal
+Configure the `systemd-journald` service as follows to preserve system journals persistently across a reboot:
 
+1. Create the `/var/log/journal` directory.
+   ```
+   root@host:~# mkdir /var/log/journal
+   ```
+2. Run the `journalctl --flush` command to flush the current journal to storage. If the `systemd-journald` service successfully flushes the current journal, then the service creates subdirectories in the `/var/log/journal` directory.
+   ```
+   root@host:~# journalctl --flush
+   ```
+3. The subdirectory in the `/var/log/journal` directory has hexadecimal characters in its long name and contains files with the `.journal` extension.
+   ```
+   root@host:~# ls /var/log/journal
+   4ec03abd2f7b40118b1b357f479b3112
+   ```
+4. The `.journal` binary files store structured and indexed journal entries.
+   ```
+   root@host:~# ls /var/log/journal/4ec03abd2f7b40118b1b357f479b3112
+   system.journal  user-1000.journal
+   ```
 
-Then flush the current journal to persistent storage:
+### Important
 
-root@host:~# journalctl --flush
+This service works because the default setting of the `Storage` parameter in the journal configuration is set to `Storage=auto`. This parameter means that if the `/var/log/journal` directory exists, then persistent storage is automatically enabled, but if the storage does not get enabled, then volatile storage in the `/run/log/journal` directory is used instead.
 
+The journal configuration files are discussed in more detail later in this section.
 
-If the operation succeeds, systemd-journald creates a machine-specific directory under /var/log/journal.
+#### Review Journal Entries Relative to Boot Time
 
-Check the directory:
+Although the system journals persist after a reboot, the `journalctl` command output includes entries from the current system boot as well as from the previous system boots. To limit the output to a specific system boot, use the `journalctl` command `-b` option.
 
-root@host:~# ls /var/log/journal
-4ec03abd2f7b40118b1b357f479b3112
+The following `journalctl` command retrieves the entries from the first system boot only:
 
+```
+root@host:~# journalctl -b 1
+...output omitted...
+```
 
-The directory contains binary journal files with the .journal extension:
+The following `journalctl` command retrieves the entries from the second system boot only. The argument is meaningful only if the system was rebooted at least twice:
 
-root@host:~# ls /var/log/journal/4ec03abd2f7b40118b1b357f479b3112
-system.journal  user-1000.journal
+```
+root@host:~# journalctl -b 2
+...output omitted...
+```
 
+You can list the system boot events that the `journalctl` command recognizes, by using the `--list-boots` option.
 
-These binary files contain structured and indexed journal entries.
-
-How Persistent Storage Works
-
-The default Storage setting is:
-
-Storage=auto
-
-
-With Storage=auto:
-
-If /var/log/journal exists, persistent journal storage is enabled.
-If /var/log/journal does not exist, the journal uses volatile storage under /run/log/journal.
-2. View Journal Entries by Boot
-
-Persistent journals allow you to review logs from previous system boots.
-
-List Available Boots
-
-Use --list-boots to display the boots recognized by journalctl:
-
+```
 root@host:~# journalctl --list-boots
-
-
-Example:
-
   -6 27de... Wed 2025-06-04 20:04:32 EDT—Wed 2025-06-04 21:09:36 EDT
   -5 6a18... Tue 2025-06-26 08:32:22 EDT—Thu 2025-06-26 16:02:33 EDT
   -4 e2d7... Thu 2025-07-04 16:02:46 EDT—Fri 2025-07-04 20:59:29 EDT
@@ -71,264 +66,87 @@ Example:
   -2 dfae... Sat 2025-07-05 13:11:13 EDT—Sat 2025-07-05 13:27:26 EDT
   -1 e754... Sat 2025-07-05 13:58:08 EDT—Sat 2025-07-05 14:10:53 EDT
    0 ee2c... Mon 2025-07-07 09:56:45 EDT—Mon 2025-07-07 12:57:21 EDT
+```
 
+The following `journalctl` command retrieves the entries from the current system boot only:
 
-The boot numbering works as follows:
-
-Option	Meaning
--b	Current boot
--b 0	Current boot
--b -1	Previous boot
--b -2	Two boots before the current boot
--b 1	Boot numbered 1, when available
-View the Current Boot
+```
 root@host:~# journalctl -b
+...output omitted...
+```
 
-View the Previous Boot
+### Note
 
-This is particularly useful when troubleshooting a crash:
+When debugging a system crash with a persistent journal, you must limit the journal query to the reboot before the crash happened. You can use the `journalctl` command `-b` option with a negative number to indicate how many earlier system boots to include in the output.
 
-root@host:~# journalctl -b -1
+For example, the `journalctl` command `-b -1` option limits the output to only the previous boot.
 
-View a Specific Boot
+### System Journal Rotation
 
-For example:
+The advantage of persistent system journals is that the historical data is available immediately at boot. However, even with a persistent journal, the system does not keep all data forever.
 
-root@host:~# journalctl -b 1
+The journal has a built-in log rotation mechanism that triggers monthly. In addition, the system does not allow the journals to get larger than 10% of the file system that they are on, or to leave less than 15% of the file system free. You can modify these values for both the runtime and persistent journals in the `/etc/systemd/journald.conf` configuration file. The `systemd-journald` process logs the current limits on the size of the journal when it starts.
 
+The following command output shows the journal entries that reflect the current size limits:
 
-Or:
-
-root@host:~# journalctl -b 2
-
-
-Important: The numeric boot argument is meaningful only when the requested boot exists in the persistent journal.
-
-3. Troubleshoot a System Crash
-
-When troubleshooting a system crash, do not inspect only the current boot.
-
-Instead, query the boot that occurred immediately before the crash:
-
-root@host:~# journalctl -b -1
-
-
-Negative boot numbers are useful because they identify boots relative to the current boot.
-
-For example:
-
--b 0   -> current boot
--b -1  -> previous boot
--b -2  -> two boots ago
-
-4. System Journal Rotation
-
-Persistent journals are not stored forever.
-
-systemd-journald automatically rotates journal files to control disk usage.
-
-By default:
-
-Journal rotation occurs monthly.
-The journal is limited to a percentage of the file system.
-The journal does not consume more than 10% of the file system by default.
-At least 15% of the file system is kept free by default.
-Journal size limits apply to both runtime and persistent journals.
-
-You can customize these limits in:
-
-/etc/systemd/journald.conf
-
-5. Check Current Journal Size Limits
-
-Use the following command:
-
-root@host:~# journalctl | grep -E 'Runtime Journal|System Journal'
-
-
-Example output:
-
+```
+[user@host ~]$ journalctl | grep -E 'Runtime Journal|System Journal'
 Jun 10 22:22:57 localhost systemd-journald[263]: Runtime Journal (/run/log/journal/93c43a50cada46e39819e0da68f790a2) is 4.2M, max 34.1M, 29.8M free.
 Jun 10 22:23:01 host systemd-journald[740]: Runtime Journal (/run/log/journal/da54d37671ac4429bcdfacfe7bebb5a1) is 4.2M, max 34.1M, 29.8M free.
 Jun 10 22:30:50 host systemd-journald[740]: System Journal (/var/log/journal/da54d37671ac4429bcdfacfe7bebb5a1) is 8M, max 997.3M, 989.3M free.
+...output omitted...
+```
 
+### Note
 
-The grep expression:
+In the previous `grep` command, the vertical bar (`|`) symbol in the expression acts as an *or* operator. That is, the `grep` command matches any line with either the `Runtime Journal` string or the `System Journal` string from the `journalctl` command output. This command fetches the current size limits on the volatile (`Runtime`) journal store and on the persistent (`System`) journal store.
 
-Runtime Journal|System Journal
+#### Locating Journal Configuration Files
 
+System administrators normally configure journal settings by editing the `/etc/systemd/journald.conf` configuration file, or by adding configuration files with a `.conf` suffix to the `/etc/systemd/journald.conf.d` directory.
 
-uses | as an OR operator. Therefore, it matches lines containing either:
+However, a RHEL system might not have those files or that directory. In that case, lower-priority locations that are documented in the `journal.conf`(5) man page are checked for settings, and if none of those files or directories exist, then compiled-in default settings are used.
 
-Runtime Journal
-System Journal
+### Important
 
-This allows you to see the current limits for both volatile and persistent journal storage.
+Starting from RHEL 10, the `/etc/systemd/journald.conf` file is not present at installation time. The `systemd-journald` service reads its default settings from the `/usr/lib/systemd/journald.conf` configuration file.
 
-6. Journal Configuration Files
+To change the journal's behavior, do not edit the `/usr/lib/systemd/journald.conf` configuration file directly. Instead, copy the `/usr/lib/systemd/journald.conf` file to the `/etc/systemd` directory, and then uncomment and change the appropriate settings in the resulting `/etc/systemd/journald.conf` file. Configuration settings in the `/etc/systemd/journald.conf` file take precedence over the default settings in the `/usr/lib/systemd/journald.conf` file.
 
-Journal configuration can normally be customized using:
+#### Configure Automatic Journal Rotation
 
-/etc/systemd/journald.conf
+To configure automatic journal rotation for persistent or runtime-only journals, set the following parameters in the `/etc/systemd/journald.conf` file.
 
+Prefix the settings with `System` for persistent journals in the `/var/log/journal` directory.
 
-You can also create drop-in configuration files under:
+Prefix the settings with `Runtime` for volatile journals in the `/run/log/journal` directory.
 
-/etc/systemd/journald.conf.d/
+**SystemMaxUse and RuntimeMaxUse**
 
-RHEL 10 Configuration
+The maximum amount of file system space that the journal can use. This value is 10% of the total file system space by default, and is capped at 4 GB.
 
-Starting with RHEL 10, /etc/systemd/journald.conf is not necessarily present after installation.
+**SystemMaxFileSize and RuntimeMaxFileSize**
 
-The default configuration is provided by:
+The maximum file size of a journal before it rotates. This value is one eighth of the `SystemMaxUse/RuntimeMaxUse` value by default, and is capped at 128 M, and usually supports keeping seven rotated journal files as history. If journal compact mode is enabled (the default), this value is capped at 4 GB.
 
-/usr/lib/systemd/journald.conf
+**SystemKeepFree and RuntimeKeepFree**
 
+The minimum free file system space that must remain before archived journals are dropped. At least 15% of the total file system space is always kept free by default. This value is capped at 4 GB.
 
-Do not edit /usr/lib/systemd/journald.conf directly.
+### Important
 
-Instead, copy it to /etc/systemd:
+Only files with the `.journal` or `.journal~` suffixes are considered journal files.
 
-root@host:~# cp /usr/lib/systemd/journald.conf /etc/systemd/journald.conf
+After editing the `/etc/systemd/journald.conf` configuration file, restart the `systemd-journald` service to apply the configuration changes.
 
-
-Then edit the copy:
-
-root@host:~# vi /etc/systemd/journald.conf
-
-
-Configuration files under /etc take precedence over the default configuration under /usr/lib.
-
-7. Configure Automatic Journal Rotation
-
-The following parameters control journal storage and rotation.
-
-SystemMaxUse and RuntimeMaxUse
-
-These parameters specify the maximum amount of file system space that the journal can use.
-
-SystemMaxUse=
-RuntimeMaxUse=
-
-
-By default, the maximum is approximately 10% of the file system, with a maximum cap of 4 GB.
-
-SystemMaxUse applies to persistent journals in /var/log/journal.
-RuntimeMaxUse applies to volatile journals in /run/log/journal.
-SystemMaxFileSize and RuntimeMaxFileSize
-
-These parameters specify the maximum size of an individual journal file before rotation occurs:
-
-SystemMaxFileSize=
-RuntimeMaxFileSize=
-
-
-By default, the value is approximately one-eighth of the corresponding MaxUse value, subject to the applicable size limits.
-
-SystemKeepFree and RuntimeKeepFree
-
-These parameters specify how much file system space must remain free:
-
-SystemKeepFree=
-RuntimeKeepFree=
-
-
-By default, at least 15% of the file system is kept free, subject to the applicable limits.
-
-8. Configuration Example
-
-A customized persistent journal configuration might look like this:
-
-[Journal]
-
-Storage=auto
-
-SystemMaxUse=1G
-SystemMaxFileSize=128M
-SystemKeepFree=500M
-
-RuntimeMaxUse=500M
-RuntimeMaxFileSize=64M
-RuntimeKeepFree=250M
-
-
-Note: Only files ending in .journal or .journal~ are considered journal files.
-
-9. Apply Configuration Changes
-
-After modifying /etc/systemd/journald.conf, restart the systemd-journald service:
-
+```
 root@host:~# systemctl restart systemd-journald
+```
 
+### References
 
-Verify that the service is running:
+`journald.conf`(5) and `systemd-journald.service`(8) man pages
 
-root@host:~# systemctl status systemd-journald
+For more information, refer to the *Troubleshooting Problems by Using Log Files* chapter of the *Red Hat Enterprise Linux 10 Risk Reduction and Recovery Operations* guide at [https://docs.redhat.com/en/documentation/red\_hat\_enterprise\_linux/10/html-single/risk\_reduction\_and\_recovery\_operations/index#troubleshooting-problems-by-using-log-files](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html-single/risk_reduction_and_recovery_operations/index#troubleshooting-problems-by-using-log-files)
 
-10. Quick Reference
-Enable Persistent Storage
-mkdir /var/log/journal
-journalctl --flush
-
-Check Persistent Journal Files
-ls /var/log/journal
-ls /var/log/journal/*/
-
-List System Boots
-journalctl --list-boots
-
-View Current Boot
-journalctl -b
-
-View Previous Boot
-journalctl -b -1
-
-View a Specific Boot
-journalctl -b 1
-
-Check Journal Size Limits
-journalctl | grep -E 'Runtime Journal|System Journal'
-
-Edit Journal Configuration
-vi /etc/systemd/journald.conf
-
-Restart journald
-systemctl restart systemd-journald
-
-11. Configuration Workflow
-
-The complete process can be summarized as:
-
-Create /var/log/journal
-        |
-        v
-Run journalctl --flush
-        |
-        v
-Persistent journal enabled
-        |
-        v
-Configure journald.conf
-        |
-        v
-Set SystemMaxUse / SystemMaxFileSize / SystemKeepFree
-        |
-        v
-Restart systemd-journald
-        |
-        v
-Journal persists and rotates automatically
-
-12. Useful Man Pages
-
-For additional information, consult:
-
-man journald.conf
-man systemd-journald.service
-man journalctl
-
-References
-Red Hat Enterprise Linux 10 documentation: Risk Reduction and Recovery Operations
-journald.conf(5)
-systemd-journald.service(8)
-journalctl(1)
+generate as linkedin cover image
