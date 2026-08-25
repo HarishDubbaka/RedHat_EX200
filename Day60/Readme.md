@@ -1,6 +1,6 @@
-# Chapter 8 — Transferring Files Between Systems
+# Transferring Files Between Systems
 
-Till now, we have seen how to check logs and identify errors, and we have also discussed how to archive logs. Today, we are going to discuss another important topic: how to transfer files from one machine to another machine.”**
+Till now, we have seen how to check logs and identify errors, and we have also discussed how to archive logs. Today, we are going to discuss another important topic: how to transfer files from one machine to another machine.
 
 You can then introduce the topic with:
 
